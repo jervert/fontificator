@@ -1,0 +1,175 @@
+/* equivalencia 10px=1em. */
+html {font-size: 125%;}
+body {font-size: .5em; font-family:arial,sans-serif;}
+
+/*body, html{font-size: 62.5%;}
+body {font-size: 101%;font-family:arial,sans-serif;}
+html>/**//*body {font-size: 100%;}*/
+
+/* inicializacion de las propiedades del modelo de caja a cero */
+* { margin:0; padding:0; }
+fieldset, img, acronym, abbr {border:0;}
+
+/* imagenes como caja de bloque principal */
+img {display: block;}
+
+/*  supresion de los marcadores de las listas */
+ol, ul { list-style:none; }
+
+/* tablas */
+table {border-collapse:collapse; border-spacing:0;}
+
+/* dimension de fuente por defecto para los elementos principales */
+li p, li li, li address, li dt, li dd, dd p, dd li, td p, td li, th p, th li, td dt, td dd, th dt, th dd, address p, address li, h1, h2, h3, h4, h5, h6 {font-size: 1em;}
+p, pre, address, li, dt, dd, th, td, caption, legend {font-size: 1em;}
+input.texto, select {font-size:1em; font-family:sans-serif; vertical-align:middle;}
+
+/* HTML 5 */
+header, nav, article, section, header, hgroup, aside, footer, figure {display:block}
+
+/* redefinicion del modelo de caja para los elementos DIV y declaracion de la clase 'clear' para el resto de elementos para evitar problemas de entidad con las flotaciones */
+.clear:after, div:after, header:after, nav:after, article:after, section:after, header:after, hgroup:after, aside:after, footer:after, figure:after {content: ""; display: block; clear: both; height: 0; visibility: hidden;}
+.clear, div, header, nav, article, section, header, hgroup, aside, footer, figure { height:auto; min-height: 0;}
+	* html .clear {height: 1%;}
+	* html div {height: 1%;}
+
+/* definicion de la presentacion general de los enlaces */
+a {color:#06c;}
+a:hover, a:focus, a:active {color:#CC3D00;}
+
+/*capitalize*/
+.capitalize{text-transform: capitalize;}
+.mayusculas{text-transform: uppercase;}
+
+/* estados */
+.estado_bien {color:#11680C;}
+.estado_mal {color:#C62137;}
+
+/* elementos ocultos */
+.indentado, .movil {display:block; left:-999em; line-height:0; position:absolute; text-indent:-999em; top:-999em;}
+.oculto {display:none;}
+
+/*anchos de campo a 14px*/
+#contenedor #cuerpo .ancho_46 {width:3.2857em;}
+
+/* 1. ESTILOS PRINCIPALES */
+@font-face {
+	font-family: 'architect';
+	src: url('OTB_FONT/architectsdaughter-architect.eot');
+	src: local('☺'), url('OTB_FONT/architectsdaughter-architect.woff') format('woff'), url('OTB_FONT/architectsdaughter-architect.ttf') format('truetype'), url('OTB_FONT/architectsdaughter-architect.svg#webfont40FyxfOG') format('svg');
+	font-weight: normal;
+	font-style: normal;
+} /* http://www.kimberlygeswein.com/?p=214 */
+
+
+html {background:#A0CA44 url(OTB_IMG_CSS_fondo_principal.gif) repeat-x 0 0;} /* gradiente: #4F6321 -> #A0CA44 */
+html body {font-family:verdana,"dejavu sans",arial,sans-serif;}
+#contenedor {border:1px solid #d6d6d6; background-color:#fff; margin:2.4em auto; padding:.9em; width:98.2em;}
+
+	/* 1.1. CAMPOS DE FORMULARIO */
+	#contenedor form label input,
+	#contenedor form label textarea {border:1px solid #bfbfbf; font-family:verdana,"dejavu sans",arial,sans-serif; font-size:1em; padding:.0714em .1428em;}
+	
+	#searchsubmit, p.botonera input {font-family:verdana,"dejavu sans",arial,sans-serif; font-size:1.2em;}
+	p.botonera input {font-size:1em;}
+	
+	/* 1.2. ESQUINAS REDONDEADAS */
+	#cabecera,
+	#cabecera_titulo div.fondo,
+	#cuerpo div.navegacion,
+	#navegacion .bloque_navegacion,
+	#listado_comentarios div.comentario,
+	#controlesSlide a,
+	#cuerpo blockquote,
+	#cuerpo pre,
+	#cuerpo div.advertencia,
+	#cuerpo dl.definicion,
+	#compartir ul li a #js_tooltip span,
+	#cuerpo .saber_mas,
+	#cuerpo div.datos,
+	#resultados .exito,
+	#contenedor {border-radius:6px;}
+	
+	
+	#cuerpo .codigo_imagen pre {border-bottom-left-radius:0; border-bottom-right-radius:0;}
+	#cuerpo .codigo_imagen figure.imagen {border-bottom-left-radius:6px; border-bottom-right-radius:6px;}
+	.opera #cuerpo pre {border-bottom-left-radius:8px; border-top-left-radius:8px;}
+	.applewebkit #cuerpo pre {border-bottom-left-radius:6px 1px; border-top-left-radius:6px 1px;}
+	.applewebkit #cuerpo .codigo_imagen pre {border-bottom-left-radius:0;}
+	.applewebkit #cuerpo .codigo_imagen figure.imagen {border-bottom-left-radius:6px 1px;}
+	
+	#navegacion_cabecera {border-bottom-right-radius:5px; border-top-left-radius:5px;}
+	#navegacion #navegacion_jerarquica ul li a,
+	#navegacion .bloque_navegacion h2 {border-top-left-radius:6px; border-top-right-radius:6px;}
+	
+	#buscador p label input {border-bottom-left-radius:6px; border-top-left-radius:6px;}
+	#buscador p input.boton {border-bottom-right-radius:6px; border-top-right-radius:6px;}
+
+
+/* 2. CABECERA, CONTENEDOR, PIE */
+#cabecera,
+#cabecera_titulo,
+#cabecera_titulo div.fondo {height:12.8em;}
+
+#cabecera {background:#a0a0a0 url(OTB_IMG_CSS_fondo_body_04.jpg) no-repeat center center; border:1px solid #bfbfbf; position:relative;}
+	#cabecera.revac {background-image:url(OTB_IMG_CSS_fondo_body_revac.jpg);}
+	/* Las imagenes de fondo aleatorias tienen los estilos en otra CSS */
+#cabecera_titulo {padding:0 1em; position:relative; z-index:1;}
+#cabecera_titulo h1 {color:#EBFF5B;}
+#cabecera_titulo h1.sin_enlace,
+#cabecera_titulo h1 a {color:#EBFF5B; font-size:5.2em; text-decoration:none; text-shadow:#000 0 0 .06944em;}
+#cabecera_titulo p {color:#fff; font-size:1.5em; font-weight:bold;}
+#cabecera_titulo>p {text-shadow:#000 0 0 .2em;}
+#cabecera_titulo h1,
+#cabecera_titulo p.descripcion {font-family:architect,verdana,"dejavu sans",arial,sans-serif; font-weight:bold;}
+#cabecera_titulo h1,
+#cabecera_titulo p {position:relative; z-index:2;}
+#cabecera_titulo p.descripcion {font-size:2em; font-weight:bold; margin-top:-.6em;}
+#cabecera_titulo div.fondo {background-color:#000; left:0; opacity:.5; position:absolute; top:0; width:98em; z-index:1;} /* propiedad filter en CSS para IE */
+
+#cuerpo {padding:1.6em 1em;}
+#cuerpo p {font-size:1.4em; margin-bottom:.5714em;}
+#pie {border-top:1px solid #BFBFBF; padding:1.6em 1em 0 1em;}
+#pie p,
+#pie li {font-size:1.2em; margin-bottom:.3333em;}
+#pie li {background:url(OTB_IMG_CSS_bola_02.png) no-repeat 0 .5em; padding-left:.6666em;}
+
+#pie .licencia {margin-bottom:1em;}
+#pie .licencia .imagen_licencia {float:left;}
+#pie .licencia .texto_licencia {float:right; width:72em;}
+
+/* 3. FORMULARIO Y CONTENIDO */
+
+#formulario_tipografia {padding-bottom:2em;}
+#formulario_tipografia legend,
+#contenido h2 {color: #404040; font-size: 2.2em; font-weight:bold; margin-bottom: .5454em; text-decoration: none;}
+#formulario_tipografia legend {margin-bottom:0; padding-bottom:.5454em;}
+#formulario_tipografia p.label,
+#formulario_tipografia label span {float:left; padding-right:.2857em; text-align:right; width:21.1428em;}
+#formulario_tipografia label span em {font-size:.7857em; font-style:normal;}
+#formulario_tipografia label input {width:21.1428em;}
+#formulario_tipografia p.botonera {padding-left:21.4285em;}
+#formulario_tipografia p.botonera input {cursor:pointer;}
+#formulario_tipografia ul.campoCheckbox {float:left;}
+#formulario_tipografia ul.campoCheckbox li {float:left; font-size:1.4em; margin-right:.7142em;}
+#formulario_tipografia .campoCheckbox input {border:0; float:left;}
+#formulario_tipografia .campoCheckbox span {text-align:left; padding:0 0 0 .2857em; width:auto;}
+
+#contenido {border-top: 1px solid #BFBFBF; padding:2em 20em 0 0;}
+#contenido h3 {color: #585858; font-size: 1.8em; margin-bottom:.5em;}
+#contenido ul {margin-bottom: 1.2em; padding-left: 1.4em;}
+#contenido ul li {background: url("OTB_IMG_CSS_bola_01.png") no-repeat scroll 0 0.5em transparent; font-size:1.4em; margin-bottom: 0.5714em; padding-left: 0.5714em;}
+
+
+/* 4. RESULTADO */
+	
+	#resultados h2 {font-family:arial,sans-serif; font-size:1.6em; font-weight:bold; margin-bottom:.5em;}
+	#resultados .exito {background:#F0F7DC url(OTB_IMG_CSS_ico_exito.gif) no-repeat .9em .9em; border:1px solid #A0CA44; margin-bottom:1.2em; padding:1em 1em 1em 4.4em;}
+	#resultados .exito p {margin:0;}
+	
+	/* 4.2 CODIGO FUENTE */
+	#cuerpo pre {background-color: #F0F7DC; border:1px solid #A0CA44; border-left-width:8px; font-family:lucida sans unicode, courier new, monospace; font-size:1em; margin: 1em 0 3em 1.3em; padding:.4em .4em .4em 1em; white-space: pre-wrap;}
+	#cuerpo .codigo_imagen pre {border-bottom:0; margin-bottom:0;}
+	#cuerpo pre code {display:block; font-family:lucida sans unicode, courier new, monospace; font-size:1.4em; overflow:auto;}
+		.msie #cuerpo pre code {font-size:1.4em}
+	#cuerpo p code, #cuerpo p code {background:#F0F7DC;padding:0 .1em; font-size:1.2em;}
