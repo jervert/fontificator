@@ -1,11 +1,4 @@
-app/_tmp/templates_c/*.php
-app/_tmp/cache/*.php
-app/admin/_tmp/templates_c/*.php
-app/admin/_tmp/cache/*.php
-app/assets/compass/compass_app_log.txt
-app/admin/assets/compass/compass_app_log.txt
-app/assets/compass/.sass-cache/*
-app/admin/assets/compass/.sass-cache/*
+app/archivos/*
 Thumbs.db
 
 #################
