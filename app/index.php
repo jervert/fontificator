@@ -16,22 +16,19 @@ if ($sistema_php=='Windows' or $sistema_php=='WIN32' or $sistema_php=='WINNT') {
 
 $directorio_completo = getcwd();
 if ($sistema=='windows') {
-	//$directorio_completo = "D:\\ARR\\My Dropbox\\AdesisTemp\\font-face";
-	//$directorio_completo = 'D:\ARR\Dropbox\Dropbox\AdesisTemp\font-face';
+
 	$directorio_completo_archivos = $directorio_completo.'\\archivos\\';
 	$bin_eot = '"'.$directorio_completo.'\bin\ttf2eot.exe"';
 	$bin_woff = '"'.$directorio_completo.'\bin\sfnt2woff.exe"';
 	$bin_svg = '"'.$directorio_completo.'\bin\batik\batik-ttf2svg.jar"';
 	$separador_eot = ' ';
 } elseif ($sistema=='linux_x86') {
-	//$directorio_completo = "/home/antonio/Dropbox/AdesisTemp/font-face";
 	$directorio_completo_archivos = $directorio_completo."/archivos/";
 	$bin_eot = ''.$directorio_completo.'/bin/ttf2eot';
 	$bin_woff = ''.$directorio_completo.'/bin/sfnt2woff';
 	$bin_svg = ''.$directorio_completo.'/bin/batik/batik-ttf2svg.jar';
 	$separador_eot = ' > ';
 } else {
-	//$directorio_completo = "/home/antonio/Dropbox/AdesisTemp/font-face";
 	$directorio_completo_archivos = $directorio_completo."/archivos/";
 	$bin_eot = ''.$directorio_completo.'/bin/ttf2eot_amd64';
 	$bin_woff = ''.$directorio_completo.'/bin/sfnt2woff_amd64';
@@ -211,7 +208,7 @@ echo $html;
 	<input type="hidden" name="c_accion" value="<?php echo $accion_subir; ?>" />
 	<fieldset>
 		<legend>Envío de tipografía</legend>
-		<p class="advertencia">Asegúrate de tener los derechos pertinentes para poder utilizar la tipografía.</p>
+		<p class="advertencia">Asegúrate de tener los derechos necesarios para poder utilizar la tipografía.</p>
 		<p class="clear"><label for="c_tipografia"><span>Archivo de tipografía <em>(formato TTF)</em>:</span><input type="file" id="c_tipografia" name="archivos[]" /></label></p>
 		
 		<p class="clear"><label for="c_nombre_tipografia"><span>Nombre de tipografía<em>(sin espacios, acentos, etc.)</em>:</span><input type="text" id="c_nombre_tipografia" name="c_nombre_tipografia" /></label></p>
