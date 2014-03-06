@@ -227,51 +227,7 @@ echo $html;
 	<p class="botonera"><input type="submit" value="Convertir" /></p>
 </form>
 </section>
-<article id="contenido">
-<h2>Uso de @font-face</h2>
-<p>Lo primero de todo es advertir que ésta técnica no valida en CSS 2.1, aunque si lo hace en CSS 3.</p>
 
-<p>La llamada desde la CSS a una tipografía ayuda a eludir la necesidad de utilizar imágenes con texto (o Flash) en aquellos casos en los que se quiere utilizar una tipografía que no es de sistema.</p>
-<p>Hay que limitarse en el uso de tipografías distintas de las habituales, evitando utilizarlas más allá de títulos (para no empeorar la legibilidad) y no utilizar varias (para evitar que la descarga de las mismas lleve un tiempo excesivo).</p>
-<p>En la CSS hay que hacer uso de la regla <code class="css">@font-face</code>:</p>
-<pre><code class="css">@font-face &#123;
-  font-family: &#039;nombre-de-tipografia-en-la-css&#039;;
-  src: url(&#039;fuente.eot&#039;);
-  src: local(&#039;☺&#039;), url(&#039;fuente.woff&#039;) format(&#039;woff&#039;), url(&#039;fuente.ttf&#039;) format(&#039;truetype&#039;), url(&#039;fuente.svg#nombre-de-tipografia-en-la-css&#039;) format(&#039;svg&#039;);
-  font-weight: normal;
-  font-style: normal;
-&#125;</code></pre>
-<p>Propiedades utilizadas:</p>
-<ul>
-<li><code class="css">font-family</code>: este es el nombre que se usará para la tipografía en las reglas de la CSS.</li>
-<li><code class="css">src</code>: ruta del archivo de tipografía.</li>
-</ul>
-<p>Un ejemplo de uso:</p>
-<pre><code class="css">#idElemento &#123;font-family:nombre-de-tipografia-en-la-css, arial, sans-serif;&#125;</code></pre>
-
-<p>Se utilizan en total cuatro archivos de tipografía:</p>
-<ul>
-  <li><strong>TTF</strong></li>
-  <li><strong>EOT:</strong> para Internet Explorer (¡Funciona en Internet Explorer 5.5!).</li>
-  <li><strong>WOFF:</strong> estándar W3C para tipografías web en estado de borrador, soportado ya por Firefox (3.6+), Chrome (6+), Opera (11.10+), Internet Explorer (9+), y proximamente Safari. Este formato de tipografía no se puede usar más que para la web, por lo que facilitará la obtención de permisos de uso de las tipografías en la web.</li>
-  <li><strong>SVG:</strong> para dispositivos iOS (iPhone, iPod Touch, iPad).</li>
-</ul>
-
-<p>Previsiblemente en el futuro el único formato a utilizar será WOFF.</p>
-
-<p>Habitualmente las tipografías nos llegan en formato TTF, por lo que habrá que convertirlas a los distintos formatos:</p>
-<ul>
-<li><a hreflang="en" href="http://www.fontsquirrel.com/fontface/generator"><span lang="en">Font Squirrel @font-face Generator</span> (enlace externo, en inglés)</a></li>
-<li><a hreflang="en" href="http://www.kirsle.net/wizards/ttf2eot.cgi"><span lang="en">TTF to EOT Font Converter</span> (enlace externo, en inglés)</a></li>
-</ul>
-<h3>Saber más</h3>
-<ul>
-<li lang="en"><a hreflang="en" href="http://www.w3.org/TR/css3-fonts/#font-face-rule">CSS Fonts Module Level 3: The @font-face rule</a></li>
-<li lang="en"><a hreflang="en" href="http://paulirish.com/2009/bulletproof-font-face-implementation-syntax/">Bulletproof @font-face syntax</a></li>
-<li><a href="http://www.cssblog.es/sintaxis-de-font-face/">Sintaxis de @font-face</a></li>
-<li lang="en"><a href="http://en.wikipedia.org/wiki/Web_Open_Font_Format" hreflang="en">Web Open Font Format (WOFF)</a></li>
-</ul>
-</article>
 </div>
 <footer id="pie">
 	<div class="licencia">
